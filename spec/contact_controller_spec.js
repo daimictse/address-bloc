@@ -6,6 +6,7 @@ describe("ContactController", () => {
 	beforeEach((done) => {
 		this.book = new ContactController();
 
+		// before each test, clear the test database of any entries created
 		sequelize.sync({force: true}).then((res) => {
 			done();
 		})
@@ -21,10 +22,11 @@ describe("ContactController", () => {
 	describe("#addContact()", () => {
 
 		it("should add a single contact into the book", (done) => {
-			this.book.addContact("Alice", "001-101-1010")
+			this.book.addContact("Alice", "001-101-1010", "alice@example.com")
 			.then((contact) => {
 				expect(contact.name).toBe("Alice");
 				expect(contact.phone).toBe("001-101-1010");
+				expect(contact.email).toBe("alice@example.com");
 				done();
 			})
 			.catch((err) => {
