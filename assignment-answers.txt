@@ -1,0 +1,12 @@
+For the following situations, determine which search approach to use and why would you take that approach. Write your answers in the submission box below.
+
+1. Performing a search of a sorted by name IRS database for a taxpayer name
+2. Searching through an unsorted list containing the days of the weekend
+3. Given a list of the planets in the Milky Way in ascending order by size, search for a planet with a given size.
+4. Searching for a checkpoint name in an unsorted list of Bloc checkpoints
+
+ANSWERS
+1. Binary search with divide and conquer algorithm on a sorted list would filter out 1/2 of the list in each iteration.
+2. Iterative search would be suitable for an unsorted list because the target can be at anywhere in the list so the binary search doesn't necessarily help.
+3. Binary search would be a better method because the sizes are in a sorted order. Same as #1. Generally the divide and conquer algorithm is a better way.
+4. Iterative would be sufficient for an unsorted list of Bloc checkpoints with the same reasoning as #2. Since the target can be at anywhere, the binary search won't help.
